@@ -25,6 +25,7 @@ function App() {
                 style={{ border: "1px solid gray", margin: "5px" }}
               >
                 <h4>{item.title}</h4>
+                
                 <p>Status: &nbsp; {item.completed ? "Completed" : "Incompleted"}</p>
               </div>
             ))}

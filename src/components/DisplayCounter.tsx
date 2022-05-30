@@ -1,9 +1,24 @@
-import React from 'react'
-
-const DisplayCounter = () => {
+type Status = {
+  name: string;
+  status: "Approved" | "Pending";
+};
+const DisplayCounter = ({ value }: { value: number }) => {
+  const product: Status[] = [
+    {
+      name: "The JavaScript",
+      status: "Approved",
+    },
+    {
+      name: "The Java",
+      status: "Pending",
+    },
+  ];
   return (
-    <div>DisplayCounter</div>
-  )
-}
+    <div>
+      <div>Counter: {value}</div>
+      <p>{product.length}</p>
+    </div>
+  );
+};
 
-export default DisplayCounter
+export default DisplayCounter;
